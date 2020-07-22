@@ -61,16 +61,14 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 });
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
-  
   if (gamePlaying) {
-
     scores[activePlayer] += roundScore;
     document.getElementById(`score-${activePlayer}`).textContent = scores[activePlayer];
 
     let input = document.getElementById('scoreSet').value;
     let winningScore;
 
-    if (input) {
+    if (isNaN(input) === false) {
       winningScore = input;
     } else {
       document.getElementById('scoreSet').value = '100';
