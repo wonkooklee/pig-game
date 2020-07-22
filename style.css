@@ -141,6 +141,42 @@ i {
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
+.winningScore {
+  position: absolute;
+  display: block;
+  top: 55%;
+  left: 50%;
+  font-size: 1rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #EB4D4D;
+}
+
+.winningScore input {
+  margin-top: 10px;
+  width: 70px;
+  height: 40px;
+  color: #EB4D4D;
+  border: 1px solid #EB4D4D;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 100px;
+}
+
+.winningScore input::placeholder {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 100;
+  opacity: .5;
+  font-family: 'Lato';
+}
+
+.winningScore input:focus {
+  outline: none;
+}
+
 .dice {
     position: absolute;
     left: 50%;

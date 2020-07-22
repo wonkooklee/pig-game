@@ -8,6 +8,7 @@ let init = function() {
   activePlayer = 0;
   gamePlaying = true;
   diceDOM = document.querySelector('.dice');
+  document.getElementById('scoreSet').value = '100';
 
   document.querySelector('.player-0-panel').classList.remove('winner');
   document.querySelector('.player-1-panel').classList.remove('winner');
@@ -27,8 +28,6 @@ let init = function() {
 
 }
 init();
-
-
 
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
@@ -61,7 +60,6 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
 });
 
-
 document.querySelector('.btn-hold').addEventListener('click', function() {
   
   if (gamePlaying) {
@@ -69,7 +67,16 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     scores[activePlayer] += roundScore;
     document.getElementById(`score-${activePlayer}`).textContent = scores[activePlayer];
 
-    if (scores[activePlayer] >= 100) {
+    let input = document.getElementById('scoreSet').value;
+    let winningScore;
+
+    if (input) {
+      winningScore = input;
+    } else {
+      document.getElementById('scoreSet').value = '100';
+    }
+
+    if (scores[activePlayer] >= winningScore) {
 
       document.getElementById(`name-${activePlayer}`).textContent = 'WINNER!';
       document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
