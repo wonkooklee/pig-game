@@ -144,7 +144,7 @@ i {
 .winningScore {
   position: absolute;
   display: block;
-  top: 55%;
+  bottom: 10px;
   left: 50%;
   font-size: 1rem;
   transform: translate(-50%, -50%);
@@ -154,7 +154,7 @@ i {
   color: #EB4D4D;
 }
 
-.winningScore input {
+#scoreSet {
   margin-top: 10px;
   width: 70px;
   height: 40px;
@@ -163,6 +163,7 @@ i {
   text-align: center;
   font-size: 1.3rem;
   border-radius: 100px;
+  transition: 0.4s;
 }
 
 .winningScore input::placeholder {
@@ -177,13 +178,25 @@ i {
   outline: none;
 }
 
+#scoreSet:hover {
+  background-color: #EB4D4D;
+  color: #fff;
+}
+
 .dice {
     position: absolute;
     left: 50%;
-    top: 178px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.dice-1 {
+  top: 120px;
+}
+
+.dice-2 {
+  top: 250px;
 }
 
 .winner { background-color: #f7f7f7; }
